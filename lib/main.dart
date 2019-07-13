@@ -1,6 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 
 void main() async {
   runApp(MyApp());
@@ -15,6 +17,21 @@ final ThemeData kDefaultTheme = ThemeData(
   primarySwatch: Colors.purple,
   accentColor: Colors.orangeAccent[400],
 );
+
+final googleSignIn = GoogleSignIn();
+final auth = FirebaseAuth.instance;
+
+Future<Null> _ensureLoggedIn() async {
+  GoogleSignInAccount user = googleSignIn.currentUser;
+  if (user == null) user = await googleSignIn.signInSilently();
+  if (user == null) user = await googleSignIn.signIn();
+  if (await auth.currentUser() == null) {
+    GoogleSignInAuthentication credentials =
+        await googleSignIn.currentUser.authentication;
+    await auth.signInWithCredential(GoogleAuthProvider.getCredential(
+        idToken: credentials.idToken, accessToken: credentials.accessToken));
+  }
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -52,14 +69,12 @@ class _ChatScreenState extends State<ChatScreen> {
           children: <Widget>[
             Expanded(
               child: ListView(
-                children: <Widget>[
-                  ChatMessage(),
-                  ChatMessage(),
-                  ChatMessage()
-                ],
+                children: <Widget>[ChatMessage(), ChatMessage(), ChatMessage()],
               ),
             ),
-            Divider(height: 1.0,),
+            Divider(
+              height: 1.0,
+            ),
             Container(
               decoration: BoxDecoration(
                 color: Theme.of(context).cardColor,
@@ -137,7 +152,8 @@ class ChatMessage extends StatelessWidget {
           Container(
             margin: const EdgeInsets.only(right: 16.0),
             child: CircleAvatar(
-              backgroundImage: NetworkImage("https://abrilexame.files.wordpress.com/2019/05/grumpy-cat.jpg"),
+              backgroundImage: NetworkImage(
+                  "https://abrilexame.files.wordpress.com/2019/05/grumpy-cat.jpg"),
             ),
           ),
           Expanded(
@@ -160,4 +176,3 @@ class ChatMessage extends StatelessWidget {
     );
   }
 }
-
