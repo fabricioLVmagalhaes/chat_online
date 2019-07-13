@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -51,7 +52,7 @@ class _ChatScreenState extends State<ChatScreen> {
           children: <Widget>[
             Container(
               decoration: BoxDecoration(
-                color: Theme.of(context).canvasColor,
+                color: Theme.of(context).cardColor,
               ),
               child: TextComposer(),
             )
@@ -68,6 +69,8 @@ class TextComposer extends StatefulWidget {
 }
 
 class _TextComposerState extends State<TextComposer> {
+  bool _isComposing = false;
+
   @override
   Widget build(BuildContext context) {
     return IconTheme(
@@ -82,15 +85,30 @@ class _TextComposerState extends State<TextComposer> {
           children: <Widget>[
             Container(
               child:
-                  IconButton(
-                      icon: Icon(Icons.photo_camera),
-                      onPressed: () {}),
+                  IconButton(icon: Icon(Icons.photo_camera), onPressed: () {}),
             ),
             Expanded(
               child: TextField(
-                decoration: InputDecoration.collapsed(hintText: "Enviar uma mensagem"),
+                decoration:
+                    InputDecoration.collapsed(hintText: "Enviar uma mensagem"),
+                onChanged: (text) {
+                  setState(() {
+                    _isComposing = text.length > 0;
+                  });
+                },
               ),
-            )
+            ),
+            Container(
+                margin: const EdgeInsets.symmetric(horizontal: 4.0),
+                child: Theme.of(context).platform == TargetPlatform.iOS
+                    ? CupertinoButton(
+                        child: Text("Enviar"),
+                        onPressed: _isComposing ? () {} : null,
+                      )
+                    : IconButton(
+                        icon: Icon(Icons.send),
+                        onPressed: _isComposing ? () {} : null,
+                      ))
           ],
         ),
       ),
