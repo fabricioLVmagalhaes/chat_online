@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "chatonlineflutter-4c1f0",
+  "private_key_id": "9aff5c8c1553eb92d6d69dd90bea4c8900021311",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQD6/Bei/aCkDZBw\nrEBBp+85qUXLFByCjSmfIyUub2k5FYjvmVMCeILDMd6dd4WIvnL6ySrCUDQs9zIv\nLjpx/x73t4UzgJ7EFje0fNAyx8yLpCerwRmnASzKDhT8tFMxX34Vg1bEahrMJg3E\nGyCSh5wvZwS2lEpwYHo48mOugBhYy/sYYrnEn4aHdna0gSA5JXF7tKYXgJzdMHr3\nyt5TJsCgOSRcToC6sOuYuhsUZCWjRkSXD7FGLzBVt5xBifyow2C9cU8Jegc61b+6\nKCPZAT1OmMqsSvIF967PTrHk6cUlj0qRUNI1TCubyJuRGanjx2q6OcLnX0JCJZcY\nU1SkyGRVAgMBAAECggEAb/VVS+lMp/G/DWvhLAiQH84hKpJZl2kF+I2Sb/DV5Nd0\n4sCn9VGxrwYHcoHXCOU/4BwtnUluxOIuOjqqaqCt/T2ZxxwodnsctT/6FbTnyyDa\na3TzjvposuduOD3uYHdjBJC2e16Dfq649FJPiN3Cb6jKQvHKdO+shcumaLiOY8kU\nHq6TE1skmzPfFMQfWtKH/t+CySycXcZFr6+d5/hvd1SxEBrsZkBCMlCDvDblGnR1\netAIUx7qPYJMf5ORRNbUhhv3806Z9nnIMEAbpbFjqO54b/IEzmqz07NZrDcHhDz1\nzSEuNFFjqeYwMAZSNXH4Jl0uFdZM6rsLSXyIi8u1jwKBgQD+uUaTO2iFRwUD8Hao\nGYbPZfmWktb++iv0Fc6QIOch64q9Bu77rgKSbmI6+m43ekIJaj4dUtDzXGjDHVn0\n1JcD31DaQy7tONJGXW4lRcJS31xDmLlqryyFi9EOuSp+EdOCrsEiwd9scsJWqPCH\nYZQ8XjhMUXnYGZ1vVhEoWMUEWwKBgQD8PgVRwXQOtlX5zqXf7CX4gaCVRr+pXRGE\nlZ+yhZwrvpaSsKiEJEU6YD1H10fyqHvn/fhEv6cim51RT8u5GhCMTb2ga5p1IDar\nTCW5v6fK5yaNvJi3PTpleeCn32mfBx6dI1S3+uDQRvg2ulCDETbL+5u0nk7bcKqI\nxUAgx2TZDwKBgHBuWP9dponFSipt9gHGmqFqklrq32jWBZaMFYu6aiqnq6o5qDyA\nlvQJMuRzazijhwhe06HfzwjLzhXpG66cMzfrVuWv58OfY/jY/mgHPXmUy0Wu4JB9\nV3put0z3YBEbTy+McQUla7eTg8H6eYhYArUOpWzSPaSr0bi11Ybof7WnAoGAVOXj\nEHNWRqVkJqJA/i8TUKMAk32ugKiMft2FVKbXu3l4YIMJFQDINC+0MHvrAWdn3NuE\nNk9zR5isyHNdFD4Ll82Kp3XQFN/0xo7om65AIXDPbyEtHW+EOiddT+NIP3g7+5Oq\nrgnIpRFd9b2b36Fpmhpje9VUoVM4crRBM0cpUE0CgYB1PL+amKrZ4UsqdUsXzXq8\nGvlUQpuEW4kfMOR9quIX5ymf/HTZwSVlDv2OhFVtIbdy6iEquWgqon35sWKU9N5b\nI36tXCFS5e1h6NS0JHDgQm8iuKg8yzhpGCtSmh3GTLTkqZOPcsi2bTckzdLOWjcQ\nsJY/5mufrkicfBo0Iwx0+Q==\n-----END PRIVATE KEY-----\n",
+  "client_email": "chatonlineflutter-4c1f0@appspot.gserviceaccount.com",
+  "client_id": "116106011039453482267",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/chatonlineflutter-4c1f0%40appspot.gserviceaccount.com"
+}
